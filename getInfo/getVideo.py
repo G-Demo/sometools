@@ -1,5 +1,7 @@
-import os, subprocess, json, re, locale, sys
-import xlwt, time, shutil, sometools.test
+import os
+import getInfo.test
+import time
+import xlwt
 from pymediainfo import MediaInfo
 
 # 获取当前文件所在绝对目录路径
@@ -7,7 +9,7 @@ this_path = os.path.abspath('.')
 print('当前路径为----', this_path)
 dir_path = this_path
 # 视频文件所在目录
-dir_path = r"D:\视频"
+dir_path = r"E:\111111111111"
 # print(os.listdir(this_path))
 print('---------------------------------')
 print('--------------程序马上开始----------------')
@@ -39,7 +41,7 @@ def get_all_file(dir_path, init_list):
     # 判断是不是..视频
     # if file.endswith(('.mp4', '.mkv', '.avi', '.wmv', '.iso')):
 
-    file_list = sometools.test.file_name(dir_path)['files']
+    file_list = getInfo.test.file_name(dir_path)['files']
     for file in file_list:
         if file.endswith(('.mp4', '.mkv', '.avi', '.wmv', '.iso')):
             init_list.append(file)

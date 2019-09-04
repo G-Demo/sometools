@@ -15,23 +15,32 @@ import os
 #     for name in dirs:
 #         print(os.path.join(root, name))
 
+#
+# def file_name(file_dir):
+#     """
+#     获取目录下所有文件及文件夹
+#     :param file_dir:
+#     :return:{'files': files, 'dirs': dirs}
+#     """
+#     files = []
+#     dirs = []
+#     for dirPath, dirNames, fileNames in os.walk(file_dir):
+#         for file in fileNames:
+#             # if os.path.splitext(file)[1] == '.jpg':
+#             files.append(os.path.join(dirPath, file))
+#         for dir in dirNames:
+#             dirs.append(os.path.join(dirPath, dir))
+#             # print(dirs)
+#     return {'files': files, 'dirs': dirs}
+#
+#
+# print(file_name("D:\视频")['files'])
 
-def file_name(file_dir):
-    """
-    获取目录下所有文件及文件夹
-    :param file_dir:
-    :return:{'files': files, 'dirs': dirs}
-    """
-    files = []
-    dirs = []
-    for dirPath, dirNames, fileNames in os.walk(file_dir):
-        for file in fileNames:
-            # if os.path.splitext(file)[1] == '.jpg':
-            files.append(os.path.join(dirPath, file))
-        for dir in dirNames:
-            dirs.append(os.path.join(dirPath, dir))
-            # print(dirs)
-    return {'files': files, 'dirs': dirs}
 
 
-print(file_name("D:\视频")['files'])
+
+
+
+
+
+
